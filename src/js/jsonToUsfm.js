@@ -21,5 +21,5 @@ exports.jsonToUSFM = function(json) {
       }
     }
   }
-  return final.join('');
+  return final.join('\n');
 };
