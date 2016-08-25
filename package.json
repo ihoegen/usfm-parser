@@ -4,7 +4,9 @@
   "description": "\"A small library that provides functions to convert usfm to JSON and vice-versa\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/**",
+    "fix": "eslint src/** --fix"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/ihoegen/usfm-parser/issues"
   },
-  "homepage": "https://github.com/ihoegen/usfm-parser#readme"
+  "homepage": "https://github.com/ihoegen/usfm-parser#readme",
+  "devDependencies": {
+    "eslint": "^3.3.1",
+    "eslint-config-google": "^0.6.0"
+  }
 }
