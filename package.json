@@ -1,0 +1,25 @@
+{
+  "name": "usfm-parser",
+  "version": "0.0.1",
+  "description": "\"A small library that provides functions to convert usfm to JSON and vice-versa\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ihoegen/usfm-parser.git"
+  },
+  "keywords": [
+    "USFM",
+    "Scripture",
+    "JSON",
+    "Bible"
+  ],
+  "author": "Ian Arlo Hoegen <ianhoegen@gmail.com> (https://github.com/ihoegen)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ihoegen/usfm-parser/issues"
+  },
+  "homepage": "https://github.com/ihoegen/usfm-parser#readme"
+}
