@@ -1,7 +1,7 @@
 {
   "name": "usfm-parser",
   "version": "0.0.1",
-  "description": "\"A small library that provides functions to convert usfm to JSON and vice-versa\"",
+  "description": "A small library that provides functions to convert usfm to JSON and vice-versa",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
