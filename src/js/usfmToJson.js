@@ -13,7 +13,7 @@ exports.usfmToJSON = function(usfmInput) {
   var chapters = usfm.split("\\c ");
   for (var ch in chapters) {
     if (/\\h /.test(chapters[ch])) {
-      bookData.book = /\\h([\w\s]+)[\n]/.exec(chapters[ch])[1].trim();
+      bookData.book = /\\h(.+)[\n]/.exec(chapters[ch])[1].trim();
     } else {
       var chapNum;
       var newChap = {verses: []};
