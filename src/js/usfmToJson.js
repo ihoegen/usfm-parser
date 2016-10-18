@@ -9,11 +9,16 @@ exports.usfmToJSON = function(usfmInput) {
   var usfm = usfmInput.replace(/\\s5|\\p/g, "");
   const chapterNumberExpression = new RegExp("^\\s*(\\d+)\\s+");
   const verseNumberExpression = new RegExp("^\\s*(\\d+)\\s+");
-  var bookData = {book: 'Unknown', chapters: []};
+  var bookData = {headers: null, book: 'Unknown', chapters: []};
   var chapters = usfm.split("\\c ");
   for (var ch in chapters) {
     if (/\\h /.test(chapters[ch])) {
-      bookData.book = /\\h(.+)[\n]/.exec(chapters[ch])[1].trim();
+      var executed = /\\h(.+)[\n]/.exec(chapters[ch]);
+      if (executed) {
+        bookData.book = /\\h(.+)[\n]/.exec(chapters[ch])[1].trim();
+      } else {
+        bookData.book = "";
+      }
     } else {
       var chapNum;
       var newChap = {verses: []};
@@ -50,5 +55,7 @@ exports.usfmToJSON = function(usfmInput) {
         bookData.chapters.push(newChap);
     }
   }
+  var getHeaders = require('./getHeaders');
+  bookData.headers = getHeaders(usfm)
   return bookData;
 };
