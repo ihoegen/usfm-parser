@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/ihoegen/usfm-parser#readme",
   "devDependencies": {
+    "chai": "^3.5.0",
     "eslint": "^3.3.1",
     "eslint-config-google": "^0.6.0",
     "mocha": "^3.1.2"
