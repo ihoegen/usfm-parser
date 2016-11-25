@@ -1,4 +1,6 @@
-[![Build Status](https://api.travis-ci.org/ihoegen/usfm-parser.svg?branch=master)](https://travis-ci.org/ihoegen/usfm-parser)
+[![Build Status](https://api.travis-ci.org/ihoegen/usfm-parser.svg?branch=master)](https://travis-ci.org/ihoegen/usfm-parser) 
+[![npm](https://img.shields.io/npm/dt/usfm-parser.svg)]()
+[![npm](https://img.shields.io/npm/v/usfm-parser.svg)]()
 
 # usfm-parser
 This library takes in USFM text, and outputs it into a JSON format.
