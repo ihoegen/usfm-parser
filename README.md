@@ -1,3 +1,5 @@
+[![Build Status](https://api.travis-ci.org/ihoegen/usfm-parser.svg?branch=master)](https://travis-ci.org/ihoegen/usfm-parser)
+
 # usfm-parser
 This library takes in USFM text, and outputs it into a JSON format.
 It also takes JSON formatted scripture and outputs it into USFM.
