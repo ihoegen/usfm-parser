@@ -4,21 +4,25 @@
  * @param {Object} json - Scripture in JSON
  * @return {String} - Scripture in USFM
 *************************************************************************/
-exports.jsonToUSFM = function(json) {
+exports.jsonToUSFM = function (json) {
   var final = [];
   if (json.book) {
-    final.push('\\h ' + json.book + '\n');
+    final.push('\\h ' + json.book);
   }
-  for (var chapter in json.chapters) {
-    if (json.chapters.hasOwnProperty(chapter)) {
-      var currentChapter = json.chapters[chapter];
-      final.push('\\c ' + currentChapter.number + '\n\\p\n');
-      for (var verse in currentChapter.verses) {
-        if (currentChapter.verses.hasOwnProperty(verse)) {
-          var currentVerse = currentChapter.verses[verse];
-          final.push('\\v ' + currentVerse.number + ' ' + currentVerse.text);
-        }
-      }
+  if (json.id) {
+    final.push('\\id ' + json.id);
+  }
+  for (var chapter in json) {
+    let chapterNumber = parseInt(chapter)
+    if (!chapterNumber || chapterNumber < 1) continue;
+    var currentChapter = json[chapterNumber];
+    final.push('\\c ' + chapterNumber);
+    final.push('\\p');
+    for (var verse in currentChapter) {
+      let verseNumber = parseInt(verse);
+      if (!verseNumber || verseNumber < 1) continue;
+      var currentVerse = currentChapter[verseNumber];
+      final.push('\\v ' + verseNumber + ' ' + currentVerse);
     }
   }
   return final.join('\n');
