@@ -19,14 +19,13 @@ exports.usfmToJSON = function (usfmInput) {
     } catch (e) {
       chapNum = parseInt(chapter);
     }
-
-    chapters[chapter].replace(chapNumReg, "");
     let usfmVerses = chapters[chapter].split("\\v ");
     usfmVerses.shift();
-    usfmJSON[chapter] = {};
+    let chapterNumber = parseInt(chapter) + 1;
+    usfmJSON[chapterNumber] = {};
     for (verse in usfmVerses) {
       let verseText = usfmVerses[verse].replace(/^\s*\d+\s+/, "");
-      usfmJSON[chapter][verse] = cleanUpVerseText(verseText)
+      usfmJSON[chapterNumber][verse] = cleanUpVerseText(verseText)
     }
   }
   var getHeaders = require('./getHeaders');
