@@ -10,7 +10,7 @@ It also takes JSON formatted scripture and outputs it into USFM.
 
 ## Usage
 ```js
-var usfm = require('usfm-json');
+var usfm = require('usfm-parser');
 //Convert from USFM to JSON
 var toJSON = usfm.toJSON(/**USFM Text**/);
 //JSON to USFM
