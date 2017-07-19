@@ -6,7 +6,7 @@
 This library takes in USFM text, and outputs it into a JSON format.
 It also takes JSON formatted scripture and outputs it into USFM.
 ## Setup
-`npm install usfm-json`
+`npm install usfm-parser`
 
 ## Usage
 ```js
