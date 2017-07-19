@@ -16,3 +16,6 @@ var toJSON = usfm.toJSON(/**USFM Text**/);
 //JSON to USFM
 var toUSFM = usfm.toUSFM(toJSON);
 ```
+
+## USFM DOCUMENTATION
+http://ubsicap.github.io/usfm/
